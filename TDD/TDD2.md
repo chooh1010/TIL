@@ -117,6 +117,8 @@ int형으로 position이 돌아다니게 되면 음수값이 넣어져서 버그
 
 객체의 데이터 값을 변경할 때는 데이터를 직접 꺼내지 않고 객체한테 메시지를 보내서 로직구현을 위임하는 것이 좋다.
 
+상태 데이터를 가지는 객체가 상태 데이터에 대한 변경을 자기 자신이 컨트롤할 수 있어야 한다.
+
 ```java
 public class Position {
     private final int position;
@@ -195,3 +197,4 @@ public static List<Car> findWinners(List<Car> cars, Position maxPosition) {
 ```
 
 위와 같이 findWinners를 static을 붙여서 클래스 메소드로 구현하면 테스트하기 쉬운 코드가 된다.
+
